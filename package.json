@@ -1,0 +1,23 @@
+{
+    "name": "hello-actions",
+    "version": "1.0.0",
+    "description": "",
+    "main": "index.js",
+    "scripts": {
+        "test": "jest sum.test"
+    },
+    "repository": {
+        "type": "git",
+        "url": "git+https://github.com/iAlan02/hello-actions.git"
+    },
+    "keywords": [],
+    "author": "",
+    "license": "ISC",
+    "bugs": {
+        "url": "https://github.com/iAlan02/hello-actions/issues"
+    },
+    "homepage": "https://github.com/iAlan02/hello-actions#readme",
+    "devDependencies": {
+        "jest": "^27.1.1"
+    }
+}
