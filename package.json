@@ -5,7 +5,8 @@
     "main": "index.js",
     "scripts": {
         "build": "webpack --config webpack.config.js",
-        "test": "jest sum.test"
+        "test": "jest sum.test",
+        "test:coverage": "jest --coverage"
     },
     "repository": {
         "type": "git",
