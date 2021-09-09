@@ -30,7 +30,7 @@ jobs:
     - run: npm run build --if-present
     - run: npm test
       
-      uses: mr-smithers-excellent/docker-build-push@v5
+    - uses: mr-smithers-excellent/docker-build-push@v5
       with:
         image: ruca93/demo-hub
         tags: v1, latest
