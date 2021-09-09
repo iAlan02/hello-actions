@@ -30,7 +30,7 @@ jobs:
     - run: npm run build --if-present
     - run: npm test
       
-    - uses: mr-smithers-excellent/docker-build-push@v5
+    - uses: mr-smithers-excellent/docker-build-push@v4
       name: Build & push Docker image
       with:
         image: rruca93/demo-hub
