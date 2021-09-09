@@ -30,12 +30,11 @@ jobs:
     - run: npm run build --if-present
     - run: npm run test:coverage
     
-    - uses: devmasx/coverage-check-action@v1.2.0
+    - uses: actions/checkout@master
+    - uses: codecov/codecov-action@v2
       with:
-        type: simplecov
-        result_path: coverage/coverage-final.json
-        min_coverage: 100
-        token: ${{ github.token }}
+        fail_ci_if_error: true 
+        verbose: true 
       
     - uses: mr-smithers-excellent/docker-build-push@v5
       with:
