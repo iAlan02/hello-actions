@@ -34,9 +34,6 @@ jobs:
       with:
         directory: ./coverage/
         files: ./coverage/coverage-final.json
-        flags: unittests
-        name: codecov-umbrella
-        path_to_write_report: ./coverage/codecov_report.txt
         verbose: true
         fail_ci_if_error: true 
       
