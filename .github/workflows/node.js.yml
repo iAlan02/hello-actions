@@ -34,15 +34,7 @@ jobs:
     - name: Analyze with SonarCloud
       uses: sonarsource/sonarcloud-github-action@master
       with:
-          projectBaseDir: my-custom-directory
-          args: >
-            -Dsonar.organization=my-organization
-            -Dsonar.projectKey=my-projectkey
-            -Dsonar.python.coverage.reportPaths=coverage.xml
-            -Dsonar.sources=lib/
-            -Dsonar.test.exclusions=test/**
-            -Dsonar.tests=test/
-            -Dsonar.verbose=true
+        projectBaseDir: hello-actions
       
     - uses: mr-smithers-excellent/docker-build-push@v5
       with:
