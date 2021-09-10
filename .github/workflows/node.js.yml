@@ -33,8 +33,10 @@ jobs:
 
     - name: Analyze with SonarCloud
       uses: sonarsource/sonarcloud-github-action@master
+      env:
+          SONAR_TOKEN: ${{ secrets.SONAR_TOKEN }}
       with:
-        projectBaseDir: hello-actions
+        projectBaseDir: hello-actions        
       
     - uses: mr-smithers-excellent/docker-build-push@v5
       with:
