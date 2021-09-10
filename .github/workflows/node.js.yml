@@ -40,8 +40,8 @@ jobs:
             -Dsonar.projectKey=my-projectkey
             -Dsonar.python.coverage.reportPaths=coverage.xml
             -Dsonar.sources=lib/
-            -Dsonar.test.exclusions=*.test.*
-            -Dsonar.tests=tests/
+            -Dsonar.test.exclusions=test/**
+            -Dsonar.tests=test/
             -Dsonar.verbose=true
       
     - uses: mr-smithers-excellent/docker-build-push@v5
