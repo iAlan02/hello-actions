@@ -21,18 +21,13 @@
         "supertest": "^6.0.1",
         "webpack": "^5.52.0"
     },
-    "devDependencies": {
-        "husky": "^7.0.2"
-    },
     "husky": {
         "hooks": {
-            "applypatch-msg”: 'echo \”[Husky] applypatch-msg\”'”',
-            "pre-applypatch”: "
-            echo\”[Husky] pre - applypatch\””,
-            "post-applypatch”: "
-            echo\”[Husky] post - applypatch\””,
-            "pre-commit”: "
-            echo\”[Husky] pre - commit\””
+            "pre-commit": "npm run test:coverage",
+            "pre-push": "npm run test:coverage"
         }
+    },
+    "devDependencies": {
+        "husky": "^7.0.2"
     }
 }
