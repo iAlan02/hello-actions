@@ -5,7 +5,8 @@
     "main": "index.js",
     "scripts": {
         "test:coverage": "jest --coverage",
-        "start": "nodemon ./server.js"
+        "start": "nodemon ./server.js",
+        "postinstall": "husky install .config/husky && husky add .config/husky/pre-commit 'npm test'"
     },
     "keywords": [],
     "author": "Alan Ruiseco",
@@ -20,12 +21,6 @@
         "nodemon": "^2.0.7",
         "supertest": "^6.0.1",
         "webpack": "^5.52.0"
-    },
-    "husky": {
-        "hooks": {
-            "pre-commit": "npm run test:coverage",
-            "pre-push": "npm run test:coverage"
-        }
     },
     "devDependencies": {
         "husky": "^7.0.2"
