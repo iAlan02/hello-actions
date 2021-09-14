@@ -5,8 +5,7 @@
     "main": "index.js",
     "scripts": {
         "test:coverage": "jest --coverage",
-        "start": "nodemon ./server.js",
-        "postinstall": "husky install .config/husky && husky add .config/husky/pre-commit 'npm test'"
+        "start": "nodemon ./server.js"
     },
     "keywords": [],
     "author": "Alan Ruiseco",
