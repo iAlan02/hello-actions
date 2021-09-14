@@ -36,6 +36,14 @@ jobs:
           SONAR_TOKEN: ${{ secrets.SONAR_TOKEN }}
       with:
         projectBaseDir: /home/runner/work/hello-actions/hello-actions
+
+    - name: SonarQube Quality Gate check
+      uses: sonarsource/sonarqube-quality-gate-action@master
+      env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          SONAR_TOKEN: ${{ secrets.SONAR_TOKEN }}
+      timeout-minutes: 5
+
       
     - uses: mr-smithers-excellent/docker-build-push@v5
       with:
