@@ -4,6 +4,7 @@ const server = require('../../server')
 const cities = require('../../utils/cities.json')
 
 describe('GET Endpoints', () => {
+    afterEach(async() => await server.close())
 
     it('Should get all the México cities', async(done) => {
         const response = await request(server).get('/city/getAll')
@@ -11,6 +12,7 @@ describe('GET Endpoints', () => {
         expect(response.body).toEqual(cities)
         done()
     })
+
     it('Should get a city by name', async(done) => {
         const cityName = "Tepezalá"
         const response = await request(server).get(`/city/getByName/${cityName}`)
@@ -18,10 +20,10 @@ describe('GET Endpoints', () => {
         expect(response.body).toEqual(cities.find(c => { return c.name === cityName }))
         done()
     })
-    afterAll(async() => await server.close())
 })
 
 describe('POST Endpoint', () => {
+    afterEach(async() => await server.close())
 
     it('Should create a new México city', async(done) => {
         const body = {
@@ -36,10 +38,10 @@ describe('POST Endpoint', () => {
         expect(response.text).toEqual("Created " + JSON.stringify(body))
         done()
     })
-    afterAll(async() => await server.close())
 })
 
 describe('PUT Endpoint', () => {
+    afterEach(async() => await server.close())
 
     it('Should update a México city', async(done) => {
         const body = {
@@ -54,10 +56,10 @@ describe('PUT Endpoint', () => {
         expect(response.text).toEqual("Updated " + JSON.stringify(body))
         done()
     })
-    afterAll(async() => await server.close())
 })
 
 describe('PATCH Endpoint', () => {
+    afterEach(async() => await server.close())
 
     it('Should update a México city', async(done) => {
         const body = {
@@ -68,10 +70,10 @@ describe('PATCH Endpoint', () => {
         expect(response.text).toEqual("Patched " + JSON.stringify(body))
         done()
     })
-    afterAll(async() => await server.close())
 })
 
 describe('DELETE Endpoint', () => {
+    afterEach(async() => await server.close())
 
     it('Should delete a México city', async(done) => {
         const cityName = "Tepezalá"
@@ -80,5 +82,4 @@ describe('DELETE Endpoint', () => {
         expect(response.text).toEqual("Deleted " + cityName)
         done()
     })
-    afterAll(async() => await server.close())
 })
