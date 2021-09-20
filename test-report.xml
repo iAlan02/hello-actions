@@ -1,28 +1,28 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <testExecutions version="1">
-  <file path="/Users/aruiseco/repositories/hello-actions/test/sum.test.js">
-    <testCase name="adds 1 + 2 to equal 3" duration="2"/>
+  <file path="/Users/aruiseco/repositories/hello-actions/test/multiply.test.js">
+    <testCase name="adds 1 * 2 to equal 2" duration="2"/>
   </file>
   <file path="/Users/aruiseco/repositories/hello-actions/test/substract.test.js">
     <testCase name="adds 3 - 2 to equal 1" duration="2"/>
   </file>
-  <file path="/Users/aruiseco/repositories/hello-actions/test/multiply.test.js">
-    <testCase name="adds 1 * 2 to equal 2" duration="2"/>
-  </file>
-  <file path="/Users/aruiseco/repositories/hello-actions/test/city/cities.controller.test.js">
-    <testCase name="GET Endpoints Should get all the México cities" duration="114"/>
-    <testCase name="GET Endpoints Should get a city by name" duration="13"/>
-    <testCase name="POST Endpoint Should create a new México city" duration="63"/>
-    <testCase name="PUT Endpoint Should update a México city" duration="3"/>
-    <testCase name="PATCH Endpoint Should update a México city" duration="3"/>
-    <testCase name="DELETE Endpoint Should delete a México city" duration="3"/>
+  <file path="/Users/aruiseco/repositories/hello-actions/test/sum.test.js">
+    <testCase name="adds 1 + 2 to equal 3" duration="2"/>
   </file>
   <file path="/Users/aruiseco/repositories/hello-actions/test/state/state.controller.test.js">
-    <testCase name="GET Endpoints Should get all the México states" duration="23"/>
-    <testCase name="GET Endpoints Should get a city by name" duration="5"/>
-    <testCase name="POST Endpoint Should create a new México state" duration="29"/>
-    <testCase name="PUT Endpoint Should update a México state" duration="5"/>
-    <testCase name="PATCH Endpoint Should update a México state" duration="5"/>
-    <testCase name="DELETE Endpoint Should delete a México state" duration="4"/>
+    <testCase name="GET Endpoints Should get all the México states" duration="22"/>
+    <testCase name="GET Endpoints Should get a city by name" duration="4"/>
+    <testCase name="POST Endpoint Should create a new México state" duration="36"/>
+    <testCase name="PUT Endpoint Should update a México state" duration="4"/>
+    <testCase name="PATCH Endpoint Should update a México state" duration="3"/>
+    <testCase name="DELETE Endpoint Should delete a México state" duration="3"/>
+  </file>
+  <file path="/Users/aruiseco/repositories/hello-actions/test/city/cities.controller.test.js">
+    <testCase name="GET Endpoints Should get all the México cities" duration="76"/>
+    <testCase name="GET Endpoints Should get a city by name" duration="13"/>
+    <testCase name="POST Endpoint Should create a new México city" duration="23"/>
+    <testCase name="PUT Endpoint Should update a México city" duration="8"/>
+    <testCase name="PATCH Endpoint Should update a México city" duration="3"/>
+    <testCase name="DELETE Endpoint Should delete a México city" duration="4"/>
   </file>
 </testExecutions>
