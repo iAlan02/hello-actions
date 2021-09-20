@@ -1,5 +1,5 @@
 const request = require('supertest')
-const server = require('../../server')
+const server = require('../../src/server')
 
 const cities = require('../../utils/states.json')
 
