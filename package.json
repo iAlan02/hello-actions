@@ -23,13 +23,15 @@
         "webpack": "^5.52.0"
     },
     "devDependencies": {
-        "husky": "^7.0.2"
+        "husky": "^7.0.2",
+        "jest-sonar-reporter": "^2.0.0"
     },
     "jest": {
         "coverageThreshold": {
             "global": {
                 "lines": 80
             }
-        }
+        },
+        "testResultsProcessor": "jest-sonar-reporter"
     }
 }
