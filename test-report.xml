@@ -10,19 +10,19 @@
     <testCase name="adds 1 * 2 to equal 2" duration="2"/>
   </file>
   <file path="/Users/aruiseco/repositories/hello-actions/test/city/cities.controller.test.js">
-    <testCase name="GET Endpoints Should get all the México cities" duration="53"/>
-    <testCase name="GET Endpoints Should get a city by name" duration="5"/>
-    <testCase name="POST Endpoint Should create a new México city" duration="65"/>
-    <testCase name="PUT Endpoint Should update a México city" duration="3"/>
-    <testCase name="PATCH Endpoint Should update a México city" duration="4"/>
+    <testCase name="GET Endpoints Should get all the México cities" duration="105"/>
+    <testCase name="GET Endpoints Should get a city by name" duration="12"/>
+    <testCase name="POST Endpoint Should create a new México city" duration="68"/>
+    <testCase name="PUT Endpoint Should update a México city" duration="4"/>
+    <testCase name="PATCH Endpoint Should update a México city" duration="3"/>
     <testCase name="DELETE Endpoint Should delete a México city" duration="4"/>
   </file>
   <file path="/Users/aruiseco/repositories/hello-actions/test/state/state.controller.test.js">
-    <testCase name="GET Endpoints Should get all the México states" duration="22"/>
-    <testCase name="GET Endpoints Should get a city by name" duration="7"/>
-    <testCase name="POST Endpoint Should create a new México state" duration="32"/>
-    <testCase name="PUT Endpoint Should update a México state" duration="6"/>
-    <testCase name="PATCH Endpoint Should update a México state" duration="5"/>
+    <testCase name="GET Endpoints Should get all the México states" duration="26"/>
+    <testCase name="GET Endpoints Should get a city by name" duration="8"/>
+    <testCase name="POST Endpoint Should create a new México state" duration="43"/>
+    <testCase name="PUT Endpoint Should update a México state" duration="8"/>
+    <testCase name="PATCH Endpoint Should update a México state" duration="4"/>
     <testCase name="DELETE Endpoint Should delete a México state" duration="4"/>
   </file>
 </testExecutions>
