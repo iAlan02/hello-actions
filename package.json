@@ -5,7 +5,9 @@
     "main": "index.js",
     "scripts": {
         "test:coverage": "jest --coverage",
-        "start": "nodemon ./server.js"
+        "test-u": "jest ./test/city/cities.controller.test.js",
+        "start": "nodemon ./server.js",
+        "test:sonar": "sonar-scanner"
     },
     "keywords": [],
     "author": "Alan Ruiseco",
@@ -22,6 +24,15 @@
         "webpack": "^5.52.0"
     },
     "devDependencies": {
-        "husky": "^7.0.2"
+        "husky": "^7.0.2",
+        "jest-sonar-reporter": "^2.0.0"
+    },
+    "jest": {
+        "coverageThreshold": {
+            "global": {
+                "lines": 80
+            }
+        },
+        "testResultsProcessor": "jest-sonar-reporter"
     }
 }

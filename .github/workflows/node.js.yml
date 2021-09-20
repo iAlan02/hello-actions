@@ -1,8 +1,8 @@
-name: Node.js CI
+name: Country Data API
 
 on:
   push:
-    branches: [ main ]
+    branches: [ feature/** ]
   pull_request:
     branches: [ main ]
 
@@ -13,8 +13,7 @@ jobs:
 
     strategy:
       matrix:
-        node-version: [14.x, 16.x]
-        # See supported Node.js release schedule at https://nodejs.org/en/about/releases/
+        node-version: [16.x]
 
     steps:
     - uses: actions/checkout@v2
@@ -25,6 +24,7 @@ jobs:
       with:
         node-version: ${{ matrix.node-version }}
         cache: 'npm'
+    - run: npm install
     - run: npm ci
     - run: npm run build --if-present
     - run: npm run test:coverage    
@@ -45,12 +45,12 @@ jobs:
       timeout-minutes: 5
 
       
-    - uses: mr-smithers-excellent/docker-build-push@v5
-      with:
-        image: ruca93/demo-hub
-        tags: v1, latest
-        registry: docker.io
-        dockerfile: Dockerfile
-        username: ${{ secrets.DOCKER_USERNAME }}
-        password: ${{ secrets.DOCKER_PASSWORD }}
+    # - uses: mr-smithers-excellent/docker-build-push@v5
+    #   with:
+    #     image: ruca93/demo-hub
+    #     tags: v1, latest
+    #     registry: docker.io
+    #     dockerfile: Dockerfile
+    #     username: ${{ secrets.DOCKER_USERNAME }}
+    #     password: ${{ secrets.DOCKER_PASSWORD }}
   

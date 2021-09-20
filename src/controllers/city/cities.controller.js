@@ -1,4 +1,4 @@
-const cities = require('../../utils/cities.json')
+const cities = require('../../../utils/cities.json')
 
 module.exports = {
     getAll: (req, res) => {

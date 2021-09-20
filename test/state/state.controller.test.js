@@ -1,29 +1,30 @@
 const request = require('supertest')
-const server = require('../../server')
+const server = require('../../src/server')
 
-const cities = require('../../utils/cities.json')
+const cities = require('../../utils/states.json')
 
 describe('GET Endpoints', () => {
+    afterEach(async() => await server.close())
 
-    it('Should get all the México cities', async(done) => {
-        const response = await request(server).get('/city/getAll')
+    it('Should get all the México states', async(done) => {
+        const response = await request(server).get('/state/getAll')
         expect(response.status).toBe(200)
         expect(response.body).toEqual(cities)
         done()
     })
     it('Should get a city by name', async(done) => {
-        const cityName = "Tepezalá"
-        const response = await request(server).get(`/city/getByName/${cityName}`)
+        const cityName = "Coahuila"
+        const response = await request(server).get(`/state/getByName/${cityName}`)
         expect(response.status).toBe(200)
         expect(response.body).toEqual(cities.find(c => { return c.name === cityName }))
         done()
     })
-    afterAll(async() => await server.close())
 })
 
 describe('POST Endpoint', () => {
+    afterEach(async() => await server.close())
 
-    it('Should create a new México city', async(done) => {
+    it('Should create a new México state', async(done) => {
         const body = {
             "id": "1",
             "state_id": "40",
@@ -31,17 +32,16 @@ describe('POST Endpoint', () => {
             "name": "Nueva Laguna",
             "initials": ""
         }
-        const response = await request(server).post('/city/create').send(body)
+        const response = await request(server).post('/state/create').send(body)
         expect(response.status).toBe(201)
         expect(response.text).toEqual("Created " + JSON.stringify(body))
         done()
     })
-    afterAll(async() => await server.close())
 })
 
 describe('PUT Endpoint', () => {
 
-    it('Should update a México city', async(done) => {
+    it('Should update a México state', async(done) => {
         const body = {
             "id": "2491",
             "state_id": "32",
@@ -49,36 +49,35 @@ describe('PUT Endpoint', () => {
             "name": "Nuevo Zacatecas",
             "initials": ""
         }
-        const response = await request(server).put('/city/update').send(body)
+        const response = await request(server).put('/state/update').send(body)
         expect(response.status).toBe(200)
         expect(response.text).toEqual("Updated " + JSON.stringify(body))
         done()
     })
-    afterAll(async() => await server.close())
 })
 
 describe('PATCH Endpoint', () => {
+    afterEach(async() => await server.close())
 
-    it('Should update a México city', async(done) => {
+    it('Should update a México state', async(done) => {
         const body = {
             "name": "Nuevo Zacatecas"
         }
-        const response = await request(server).patch('/city/patch').send(body)
+        const response = await request(server).patch('/state/patch').send(body)
         expect(response.status).toBe(200)
         expect(response.text).toEqual("Patched " + JSON.stringify(body))
         done()
     })
-    afterAll(async() => await server.close())
 })
 
 describe('DELETE Endpoint', () => {
+    afterEach(async() => await server.close())
 
-    it('Should delete a México city', async(done) => {
+    it('Should delete a México state', async(done) => {
         const cityName = "Tepezalá"
-        const response = await request(server).delete(`/city/delete/${cityName}`)
+        const response = await request(server).delete(`/state/delete/${cityName}`)
         expect(response.status).toBe(200)
         expect(response.text).toEqual("Deleted " + cityName)
         done()
     })
-    afterAll(async() => await server.close())
 })
