@@ -6,7 +6,8 @@
     "scripts": {
         "test:coverage": "jest --coverage",
         "test-u": "jest ./test/city/cities.controller.test.js",
-        "start": "nodemon ./server.js"
+        "start": "nodemon ./server.js",
+        "test:sonar": "sonar-scanner"
     },
     "keywords": [],
     "author": "Alan Ruiseco",
