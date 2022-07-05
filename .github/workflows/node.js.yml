@@ -21,11 +21,11 @@ jobs:
         fetch-depth: 0
     - name: Use Node.js ${{ matrix.node-version }}
       uses: actions/setup-node@v2
-      if: ${{env.GITHUB_REF == 'refs/heads/feature/11-add-addition-operator'}}
       with:
         node-version: ${{ matrix.node-version }}
         cache: 'npm'
     - run: echo $GITHUB_REF
+      if: ${{env.GITHUB_REF == 'refs/heads/feature/11-add-addition-operator'}}
     - run: npm install
     - run: npm ci
     - run: npm run build --if-present
