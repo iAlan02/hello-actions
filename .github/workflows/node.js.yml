@@ -24,7 +24,7 @@ jobs:
     #   with:
     #     node-version: ${{ matrix.node-version }}
     #     cache: 'npm'
-    - run: echo ${{github.env}}
+    - run: echo ${{github.ref_name}}
     - run: echo 'si jala'
       # if: ${{"$env.GITHUB_REF" == "refs/heads/feature/11-add-addition-operator"}}
     # - run: npm install
